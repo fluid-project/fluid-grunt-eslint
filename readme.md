@@ -1,4 +1,9 @@
-# grunt-eslint [![Build Status](https://travis-ci.org/sindresorhus/grunt-eslint.svg?branch=master)](https://travis-ci.org/sindresorhus/grunt-eslint)
+# grunt-eslint - Fluid Community Edition
+
+This differs from the upstream version of [grunt-eslint](https://github.com/sindresorhus/grunt-eslint) in that
+
+* It binds to [fluid-eslint](https://github.com/fluid-project/fluid-eslint) rather than [ESLint](https://github.com/eslint/eslint), in order to include a fully working fix for [issue 4931](https://github.com/eslint/eslint/issues/4931)
+* It includes a fix for [issue 19](https://github.com/sindresorhus/grunt-eslint/issues/19), outputting the number of linted files, which the grunt-eslint maintainer has refused a fix for
 
 > Validate files with [ESLint](http://eslint.org)
 

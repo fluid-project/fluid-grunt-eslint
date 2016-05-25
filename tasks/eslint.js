@@ -1,6 +1,6 @@
 'use strict';
 var chalk = require('chalk');
-var eslint = require('eslint');
+var eslint = require('fluid-eslint');
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('eslint', 'Validate files with ESLint', function () {
@@ -22,7 +22,9 @@ module.exports = function (grunt) {
 		if (this.filesSrc.length === 0) {
 			grunt.log.writeln(chalk.magenta('Could not find any files to validate.'));
 			return true;
-		}
+    } else {
+      grunt.log.ok(this.filesSrc.length + ' ' + grunt.util.pluralize(this.filesSrc.length, 'file/files') + ' lint free.');
+    }
 
 		var formatter = eslint.CLIEngine.getFormatter(opts.format);
 

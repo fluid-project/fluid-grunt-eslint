@@ -1,5 +1,5 @@
 {
-  "name": "grunt-eslint",
+  "name": "fluid-grunt-eslint",
   "version": "18.1.0",
   "description": "Validate files with ESLint",
   "license": "MIT",
@@ -30,7 +30,7 @@
   ],
   "dependencies": {
     "chalk": "^1.0.0",
-    "eslint": "^2.0.0"
+    "fluid-eslint": "^2.0.0"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
