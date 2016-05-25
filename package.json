@@ -1,9 +1,9 @@
 {
   "name": "fluid-grunt-eslint",
-  "version": "18.1.0",
+  "version": "18.1.1",
   "description": "Validate files with ESLint",
   "license": "MIT",
-  "repository": "sindresorhus/grunt-eslint",
+  "repository": "fluid-project/fluid-grunt-eslint",
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",

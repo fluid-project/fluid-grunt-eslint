@@ -22,8 +22,6 @@ module.exports = function (grunt) {
 		if (this.filesSrc.length === 0) {
 			grunt.log.writeln(chalk.magenta('Could not find any files to validate.'));
 			return true;
-    } else {
-      grunt.log.ok(this.filesSrc.length + ' ' + grunt.util.pluralize(this.filesSrc.length, 'file/files') + ' lint free.');
     }
 
 		var formatter = eslint.CLIEngine.getFormatter(opts.format);
@@ -65,6 +63,9 @@ module.exports = function (grunt) {
 
 		if (report.errorCount === 0 && tooManyWarnings) {
 			grunt.warn('ESLint found too many warnings (maximum:' + opts.maxWarnings + ')');
+		}
+		if (report.errorCount === 0) {
+      grunt.log.ok(this.filesSrc.length + ' ' + grunt.util.pluralize(this.filesSrc.length, 'file/files') + ' lint free.');
 		}
 
 		return report.errorCount === 0;
