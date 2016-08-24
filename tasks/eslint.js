@@ -65,7 +65,7 @@ module.exports = function (grunt) {
 			grunt.warn('ESLint found too many warnings (maximum:' + opts.maxWarnings + ')');
 		}
 		if (report.errorCount === 0) {
-      grunt.log.ok(this.filesSrc.length + ' ' + grunt.util.pluralize(this.filesSrc.length, 'file/files') + ' lint free.');
+      grunt.log.ok(report.results.length + ' ' + grunt.util.pluralize(report.results.length, 'file/files') + ' lint free.');
 		}
 
 		return report.errorCount === 0;
