@@ -31,7 +31,6 @@ grunt.initConfig({
 grunt.registerTask('default', ['eslint']);
 ```
 
-
 ## Examples
 
 ### Custom config and rules
@@ -60,7 +59,31 @@ grunt.initConfig({
 	}
 });
 ```
+## Two Common Configuration Needs
 
+ESLint has [many configuration options available]([ESLint options](http://eslint.org/docs/developer-guide/nodejs-api#cliengine)); two common ones that are sometimes *gotchas*:
+
+### Specifying valid globals in an individual Javascript file
+
+This prevents ESLint from raising an error when a global expected to be included from another file (such as `fluid` or `jqUnit`) is not defined, as in this example error message:
+
+```
+ 122:9   error  'fluid' is not defined  no-undef
+```
+
+Valid globals can be defined in comments at the top of an individual JS file:
+
+```
+/* global fluid, jqUnit */
+```
+
+### Specifying node as the environment in an individual Javascript file
+
+There are [fulsome details on configuring the environment](http://eslint.org/docs/user-guide/configuring#specifying-environments), but a common need is to specify that a file should be linted for a node environment. Again, this can be done in comments at the top of an individual JS file:
+
+```
+/* eslint-env node, mocha */
+```
 
 ## Options
 
