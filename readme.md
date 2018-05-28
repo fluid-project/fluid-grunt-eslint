@@ -13,7 +13,7 @@ This differs from the upstream version of [grunt-eslint](https://github.com/sind
 ## Install
 
 ```
-$ npm install --save-dev grunt-eslint
+$ npm install --save-dev fluid-grunt-eslint
 ```
 
 
